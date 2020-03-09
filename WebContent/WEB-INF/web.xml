@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>microprojet</display-name>
+  <welcome-file-list>
+    <welcome-file>Inscription</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>jdbc.Driver</param-name>
+    <param-value>com.cj.mysql.jdbc.Driver</param-value>
+  </context-param>
+  <context-param>
+    <param-name>localisation</param-name>
+    <param-value>jdbc:mysql://localhost:3309/microprojet</param-value>
+  </context-param>
+  <context-param>
+    <param-name>user</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  <context-param>
+    <param-name>pass</param-name>
+    <param-value></param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>Inscription</servlet-name>
+    <servlet-class>servlets.Inscription</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Inscription</servlet-name>
+    <url-pattern>/Inscription</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>Authentification</servlet-name>
+    <servlet-class>servlets.Authentification</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Authentification</servlet-name>
+    <url-pattern>/Authentification</url-pattern>
+  </servlet-mapping>
+</web-app>
